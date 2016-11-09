@@ -57,7 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Attendee.cs" />
     <Compile Include="Entities\AuthUser.cs" />
+    <Compile Include="Entities\IEntityBase.cs" />
+    <Compile Include="Entities\Schedule.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
