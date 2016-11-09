@@ -6,7 +6,7 @@ namespace Scheduler.Data.Configurations
     {
         public ScheduleConfiguration()
         {
-            HasRequired(x => x.Creator).WithMany(x => x.SchedulesCreated).HasForeignKey(x => x.CreatorId);
+            HasRequired(x => x.Creator).WithMany(x => x.SchedulesCreated).HasForeignKey(x => x.CreatorId).WillCascadeOnDelete(false);
         }
     }
 }
