@@ -22,7 +22,7 @@ namespace Scheduler.Domain.Entities
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
         public User Creator { get; set; }
-        public int CreatorId { get; set; }
+        public long CreatorId { get; set; }
         public ICollection<Attendee> Attendees { get; set; }
     }
 
