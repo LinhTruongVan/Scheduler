@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
+﻿using Microsoft.Owin.Security.OAuth;
 using System.Web.Http;
-using Microsoft.Owin.Security.OAuth;
-using Newtonsoft.Json.Serialization;
+using System.Web.Http.Cors;
 
 namespace Scheduler
 {
@@ -12,6 +8,9 @@ namespace Scheduler
     {
         public static void Register(HttpConfiguration config)
         {
+            // Enable cross-domain
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
